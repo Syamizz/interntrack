@@ -298,6 +298,13 @@ app.get('/api/auth/me', authenticateToken, async (req, res) => {
   }
 })
 
+app.get('/api/health', (_req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'InternTrack API is running',
+  })
+})
+
 //run port
 const PORT = Number(process.env.PORT) || 3000
 

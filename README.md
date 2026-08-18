@@ -1,4 +1,5 @@
 # InternTrack
+![InternTrack CI](https://github.com/Syamizz/interntrack/actions/workflows/ci.yml/badge.svg)
 
 InternTrack is a full-stack internship application tracking system built to help users manage and monitor their internship or job applications in one place.
 

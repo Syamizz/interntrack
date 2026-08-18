@@ -1,3 +1,7 @@
+## 🌐 Live Demo
+
+[View InternTrack Live](https://YOUR-VERCEL-URL.vercel.app)
+
 # InternTrack
 ![InternTrack CI](https://github.com/Syamizz/interntrack/actions/workflows/ci.yml/badge.svg)
 

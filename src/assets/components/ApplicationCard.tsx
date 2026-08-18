@@ -31,7 +31,7 @@ const ApplicationCard = memo(function ApplicationCard({
       <button
         data-cy="delete-application"
         onClick={() => onDelete(id)}
-        className="mt-4 bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-red-600"
+        className="mt-4 mr-2 bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-red-600"
       >
         Delete
       </button>
@@ -39,7 +39,7 @@ const ApplicationCard = memo(function ApplicationCard({
       <button
         data-cy="edit-application"
         onClick={() => onEdit(id)}
-        className="mt-4 mr-2 bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600"
+        className="mt-4 ml-2 mr-2 bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600"
       >
         Edit
       </button>

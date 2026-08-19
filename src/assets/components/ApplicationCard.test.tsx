@@ -2,6 +2,14 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ApplicationCard from './ApplicationCard'
 
+//Mock dark mode context
+jest.mock('../../context/useTheme', () => ({
+  useTheme: () => ({
+    darkMode: false,
+    toggleTheme: jest.fn(),
+  }),
+}))
+
 test('calls delete function when Delete button is clicked', async () => {
   const user = userEvent.setup()
 

@@ -1,4 +1,6 @@
 import { memo } from "react"
+import { useTheme } from '../../context/useTheme'
+
 
 type ApplicationCardProps = {
   id: number
@@ -17,8 +19,17 @@ const ApplicationCard = memo(function ApplicationCard({
   onDelete,
   onEdit,
 }: ApplicationCardProps) {
+
+  const { darkMode } = useTheme()
+
   return (
-    <div className="bg-white p-5 rounded-xl shadow">
+    <div
+  className={`p-5 rounded-xl border shadow-sm ${
+    darkMode
+      ? 'bg-slate-900 border-slate-700 text-white'
+      : 'bg-white border-gray-200 text-gray-900'
+  }`}
+>
       <h3 className="text-xl font-bold">{company}</h3>
       <p className="text-gray-500 mt-2">{position}</p>
 

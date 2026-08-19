@@ -322,8 +322,14 @@ function App() {
                     <StatCard title="Offer" value={offerCount} />
                   </div>
 
+                  {/*Application Part */}
                   <h2 className='text-2x1 font-bold mt-8 mb-4'>Applications</h2> <br />
-                  <div className="bg-white p-5 rounded-xl shadow mb-6">
+                  <div
+                    className={`p-5 rounded-xl border shadow-sm ${darkMode
+                      ? 'bg-slate-900 border-slate-700 text-white'
+                      : 'bg-white border-gray-200 text-gray-900'
+                      }`}
+                  >
 
                     <h3 className='text-lg font-semibold mb-4'>
                       Add New Application
@@ -335,7 +341,13 @@ function App() {
                         placeholder="Company name"
                         value={company}
                         onChange={(event) => setCompany(event.target.value)}
-                        className="border border-gray-300 rounded-lg px-3 py-2 mr-2 w-full md:w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`border rounded-lg px-3 py-2 mr-2 w-full md:w-72
+                                    focus:outline-none focus:ring-2 focus:ring-blue-500
+                                    ${darkMode
+                            ? 'bg-slate-900 border-slate-600 text-white placeholder-slate-400'
+                            : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                          }
+                        `}
                       />
 
                       <input
@@ -344,7 +356,13 @@ function App() {
                         placeholder="Position"
                         value={position}
                         onChange={(event) => setPosition(event.target.value)}
-                        className="border border-gray-300 rounded-lg px-3 py-2 mr-2 w-full md:w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`border rounded-lg px-3 py-2 mr-2 w-full md:w-72
+                                    focus:outline-none focus:ring-2 focus:ring-blue-500
+                                    ${darkMode
+                            ? 'bg-slate-900 border-slate-600 text-white placeholder-slate-400'
+                            : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                          }
+                        `}
                       />
 
                       <select
@@ -380,12 +398,19 @@ function App() {
                     </div>
                   </div>
                   <br /><br />
+                  {/*Search company part */}
                   <input
                     type="text"
                     placeholder="Search company..."
                     value={search}
                     onChange={(event) => setSearch(event.target.value)}
-                    className="border border-gray-300 rounded-lg px-3 py-2 w-full md:w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className={`border rounded-lg px-3 py-2 w-full md:w-72
+                                  focus:outline-none focus:ring-2 focus:ring-blue-500
+                                  ${darkMode
+                        ? 'bg-slate-900 border-slate-600 text-white placeholder-slate-400'
+                        : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                      }
+                    `}
                   />
 
                   <select
